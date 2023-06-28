@@ -68,7 +68,7 @@ class Device(db.Model, SerializerMixin):
 
     # Relationships
     geedees = db.relationship('Geedee', back_populates='device', cascade='all, delete-orphan')
-    devices = association_proxy('geedees', 'game', creator=lambda g: Geedee(game=g))
+    games = association_proxy('geedees', 'game', creator=lambda g: Geedee(game=g))
 
     # Serializer
     serialize_rules = ('-geedees',)

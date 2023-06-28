@@ -63,6 +63,15 @@ class GamesById(Resource):
             response_body = {'error': 'Game not found'}
             return make_response(jsonify(response_body), 404)
         response_body = game.to_dict()
+        devices_list = []
+        for device in game.devices:
+            device_dict = device.to_dict()
+            devices_list.append(device_dict)
+        developer_list = [game.developer.to_dict()]
+        response_body.update({
+            "devices": devices_list,
+            "developers": developer_list
+            })
         return make_response(jsonify(response_body), 200)
 
     def patch(self, id):
@@ -118,6 +127,23 @@ class Developers(Resource):
 
 api.add_resource(Developers, '/developers')
 
+class DevelopersById(Resource):
+
+    def get(self, id):
+        developer = Developer.query.filter(Developer.id == id).first()
+        if not developer:
+            response_body = {'error': 'Developer not found'}
+            return make_response(jsonify(response_body), 404)
+        response_body = developer.to_dict()
+        games_list = []
+        for game in developer.games:
+            game_dict = game.to_dict()
+            games_list.append(game_dict)
+        response_body.update({'games': games_list})
+        return make_response(jsonify(response_body), 200)
+
+api.add_resource(DevelopersById, '/developers/<int:id>')
+
 class Devices(Resource):
 
     def get(self):
@@ -153,6 +179,11 @@ class DevicesById(Resource):
             response_body = {'error': 'Device not found'}
             return make_response(jsonify(response_body), 404)
         response_body = device.to_dict()
+        games_list = []
+        for game in device.games:
+            game_dict = game.to_dict()
+            games_list.append(game_dict)
+        response_body.update({"games": games_list})
         return make_response(jsonify(response_body), 200)
 
     def patch(self, id):
