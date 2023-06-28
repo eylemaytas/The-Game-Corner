@@ -70,3 +70,37 @@
   padding-left: 15%;
   padding-top: 30%;
 }
+
+.device-card img {
+  max-width: 200px;
+}
+
+.device-card {
+  text-align: center;
+}
+
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  padding: 2%;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+.game-card img {
+  max-width: 100px;
+}
+
+.game-card {
+  text-align: center;
+  font-size: 10px;
+}
