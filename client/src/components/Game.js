@@ -1,10 +1,10 @@
 import React from "react";
 
-function Game({game}) {
+function Game({game, gameFocusSelector}) {
     
     return(
         <div className="game-card">
-            <img src={game.image} alt="Hi" />
+            <img onClick={gameFocusSelector} src={game.image} alt={game.id} />
             <h2>{game.name}</h2>
         </div>
     )

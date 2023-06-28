@@ -58,6 +58,9 @@ with app.app_context():
 
     geedees = []
     geedees.append(Geedee(game_id=1, device_id=3))
+    geedees.append(Geedee(game_id=5, device_id=3))
+    geedees.append(Geedee(game_id=2, device_id=3))
+    geedees.append(Geedee(game_id=3, device_id=3))
     geedees.append(Geedee(game_id=1, device_id=8))
     geedees.append(Geedee(game_id=1, device_id=12))
     geedees.append(Geedee(game_id=1, device_id=19))

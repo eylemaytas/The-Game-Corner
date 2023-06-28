@@ -1,10 +1,10 @@
 import React from "react";
 import Game from "./Game";
 
-function GameList({games}) {
+function GameList({games, gameFocusSelector}) {
 
     const game = games.map(game => {
-        return <Game game={game} />
+        return <Game game={game} key={game.id} gameFocusSelector={gameFocusSelector}/>
     })
 
     return(

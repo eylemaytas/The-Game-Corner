@@ -1,10 +1,10 @@
 import React from "react";
 import Developer from "./Developer";
 
-function DeveloperList({developers}) {
+function DeveloperList({developers, developerFocusSelector}) {
 
     const developer = developers.map(developer => {
-        return <Developer developer={developer} />
+        return <Developer developer={developer} developerFocusSelector={developerFocusSelector}/>
     })
     return(
         <div className="developer-grid">

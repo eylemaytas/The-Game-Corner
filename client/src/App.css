@@ -129,3 +129,77 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.device-focus-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.device-focus-page div {
+  margin: 2%;
+}
+
+.device-focus-page img {
+  max-width: 300px;
+}
+
+.device-focus-card img {
+  max-width: 50px;
+}
+
+.device-focus-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+////////
+
+
+
+
+.developer-focus-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.developer-focus-page div {
+  margin: 2%;
+}
+
+.developer-focus-page img {
+  max-width: 300px;
+}
+
+.developer-focus-card img {
+  max-width: 50px;
+}
+
+.developer-focus-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-focus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  text-align: center;
+}
+
+.game-focus img {
+  max-width: 300px;
+  margin: 2%;
+}

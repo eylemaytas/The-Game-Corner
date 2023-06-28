@@ -1,10 +1,10 @@
 import React from "react";
 
-function Device({device}) {
+function Device({device, deviceFocusSelector}) {
 
     return(
         <div className="device-card">
-            <img src={device.image} alt="Hi" />
+            <img onClick={deviceFocusSelector} src={device.image} alt={device.id} />
             <h2>{device.name}</h2>
             <p>{device.type}</p>
         </div>
