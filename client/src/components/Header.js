@@ -1,14 +1,12 @@
-function Header(){
-    return (
-        <header>
-            <h1>
-            Hotels Website
-            <span className="logo" role="img">
-                🏨
-            </span>
-            </h1>
-        </header>
+import React from "react";
+
+function Header() {
+
+    return(
+        <div className="header">
+            <img src="/assets/Logo-final.png" alt="Hi"/>
+        </div>
     )
 }
 
-export default Header;
+export default Header

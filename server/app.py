@@ -19,7 +19,7 @@ migrate = Migrate(app, db)
 
 db.init_app(app)
 
-# CORS(app)
+CORS(app)
 
 api = Api(app)
 
