@@ -9,6 +9,7 @@ import Homepage from './Homepage';
 import DeviceList from './DeviceList';
 import GameList from './GameList';
 import DeveloperList from './DeveloperList';
+import Nav from './Nav';
 
 function App() {
 
@@ -36,7 +37,10 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <div className='header'>
+        <Header />
+        <Nav />
+      </div>
       <Switch>
         <Route exact path="/">
           <Login />
