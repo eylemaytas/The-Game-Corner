@@ -11,8 +11,14 @@ with app.app_context():
     Geedee.query.delete()
 
     developers = []
-    developers.append(Developer(name='Activision', logo='https://assets.stickpng.com/images/6213a6969e489670308bdb8f.png'))
+    developers.append(Developer(name='Activision', logo='https://banner2.cleanpng.com/20180525/wui/kisspng-prototype-activision-blizzard-video-game-skylander-5b07b7a1f07547.6335945515272324179849.jpg'))
     developers.append(Developer(name='Bandi Namco Entertainment', logo='https://companieslogo.com/img/orig/7832.T-afbe2170.png?t=1643617765'))
+    developers.append(Developer(name='Bandi Namco Entertainment', logo='https://companieslogo.com/img/orig/7832.T-afbe2170.png?t=1643617765'))
+    developers.append(Developer(name='Bandi Namco Entertainment', logo='https://companieslogo.com/img/orig/7832.T-afbe2170.png?t=1643617765'))
+    developers.append(Developer(name='Bandi Namco Entertainment', logo='https://companieslogo.com/img/orig/7832.T-afbe2170.png?t=1643617765'))
+    developers.append(Developer(name='Bandi Namco Entertainment', logo='https://companieslogo.com/img/orig/7832.T-afbe2170.png?t=1643617765'))
+    developers.append(Developer(name='Bandi Namco Entertainment', logo='https://companieslogo.com/img/orig/7832.T-afbe2170.png?t=1643617765'))
+    
 
     games = []
     games.append(Game(name='Call of Duty: Modern Warfare 3', release_year=2011, image='https://cdn.europosters.eu/image/1300/posters/call-of-duty-mw3-cover-i11163.jpg', genre='Shooter', online=True, number_of_players=4, description='This is a first-person shooter in which players assume the role of military operatives tasked with thwarting the plans of a terrorist leader. Players complete mission objectives and engage in battles that take place in modern-day locations across the globe.', developer_id=1))

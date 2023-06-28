@@ -8,11 +8,13 @@ import Footer from './Footer';
 import Homepage from './Homepage';
 import DeviceList from './DeviceList';
 import GameList from './GameList';
+import DeveloperList from './DeveloperList';
 
 function App() {
 
   const [devices, setDevices] = useState([])
   const [games, setGames] = useState([])
+  const [developers, setDevelopers] = useState([])
 
   useEffect(() => {
     fetch('http://127.0.0.1:7000/devices')
@@ -24,6 +26,12 @@ function App() {
     fetch('http://127.0.0.1:7000/games')
     .then(res => res.json())
     .then(gameData => setGames(gameData))
+  }, [])
+
+  useEffect(() => {
+    fetch('http://127.0.0.1:7000/developers')
+    .then(res => res.json())
+    .then(developerData => setDevelopers(developerData))
   }, [])
 
   return (
@@ -41,6 +49,9 @@ function App() {
         </Route>
         <Route exact path="/games">
           <GameList games={games} />
+        </Route>
+        <Route exact path="/developers">
+          <DeveloperList developers={developers} />
         </Route>
       </Switch>
       <Footer />
